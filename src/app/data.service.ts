@@ -19,7 +19,7 @@ getBeer(){
 
   return this.http.post('https://api.r8.beer/v1/api/graphql/', data, {
   headers:{
-     'x-api-key': ''}
+     'x-api-key': 'yo5e6HwJhh4xzYm1uTUO9mdHTmAQ6TL7w5wfMNNg'}
     });
 }
 }

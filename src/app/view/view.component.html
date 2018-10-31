@@ -1,23 +1,35 @@
-<div *ngIf='beers'  class='container'>
-    <div *ngFor='let beer of beers.data.topBeers.items'>
+<div *ngIf='beers' class='container'>
+    <ul class='list-group'>
+        <li *ngFor='let beer of beers.data.topBeers.items' 
+        class="list-group-item "
+        [class.active]="beer === selectedBeer" 
+        (click)="onSelect(beer)">{{beer.name}}</li>
+    </ul>
+</div>
+  
+
+<div *ngIf='selectedBeer'  class='container'>
+   
         <div class='row'>
             <div class='col-md-2'>
-             <img src={{beer.imageUrl}}>
+             <img src={{selectedBeer.imageUrl}}>
             </div>
             <div class='col-md-3'>
-                <p>{{beer.description}}</p>
-                <p>{{beer.style.description}}</p>
+                <p>{{selectedBeer.description}}</p>
+                <p>{{selectedBeer.style.description}}</p>
             </div>
             <div class='col-md-7'>
-                <h3>{{beer.brewer.name}}</h3>
-                <div *ngIf='beer.brewer.facebook'>
-                    <a href={{beer.brewer.facebook}}><i class="fa fa-facebook-official fa-4x text-info"></i></a>
+                <h3>{{selectedBeer.brewer.name}}</h3>
+                <div *ngIf='selectedBeer.brewer.facebook'>
+                    <a href={{selectedBeer.brewer.facebook}}><i class="fa fa-facebook-official fa-4x text-info"></i></a>
                 </div>
-                <div *ngIf='beer.brewer.web'>
-                    <a href={{beer.brewer.web}}><i class="fa fa-internet-explorer fa-4x text-info"></i></a>
+                <div *ngIf='selectedBeer.brewer.web'>
+                    <a href={{selectedBeer.brewer.web}}><i class="fa fa-internet-explorer fa-4x text-info"></i></a>
                 </div>
             </div>
         </div>        
-    </div>
+    
 </div>  
-        
+      
+  
+<app-beer-detail></app-beer-detail>

@@ -8,6 +8,12 @@ import {DataService} from '../data.service';
 })
 export class ViewComponent implements OnInit {
   beers: {};
+  selectedBeer: {};
+  
+  onSelect(beer): void {
+  this.selectedBeer = beer;
+  console.log(beer);
+}
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
