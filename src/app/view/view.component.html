@@ -1,11 +1,23 @@
-<ul *ngIf='beers'>
-    <li *ngFor='let beer of beers.data.topBeers.items'>
-        <img src={{beer.imageUrl}}>
-        <p>{{beer.description}}</p>
-        <p>{{beer.id}} {{beer.style.description}}/p>
-        <h3>{{beer.brewer.name}}</h3>
-        <h4>{{beer.brewer.facebook}}</h4>
-        <h4>{{beer.brewer.web}}</h4>
-    </li>
-</ul>
- 
+<div *ngIf='beers'  class='container'>
+    <div *ngFor='let beer of beers.data.topBeers.items'>
+        <div class='row'>
+            <div class='col-md-2'>
+             <img src={{beer.imageUrl}}>
+            </div>
+            <div class='col-md-3'>
+                <p>{{beer.description}}</p>
+                <p>{{beer.style.description}}</p>
+            </div>
+            <div class='col-md-7'>
+                <h3>{{beer.brewer.name}}</h3>
+                <div *ngIf='beer.brewer.facebook'>
+                    <a href={{beer.brewer.facebook}}><i class="fa fa-facebook-official fa-4x text-info"></i></a>
+                </div>
+                <div *ngIf='beer.brewer.web'>
+                    <a href={{beer.brewer.web}}><i class="fa fa-internet-explorer fa-4x text-info"></i></a>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>  
+        
