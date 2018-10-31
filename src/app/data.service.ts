@@ -27,6 +27,6 @@ getBeer(){
 curl -v 'https://api.r8.beer/v1/api/graphql/' \
 -H 'content-type: application/json' \
 -H 'accept: application/json' \
--H 'x-api-key: yo5e6HwJhh4xzYm1uTUO9mdHTmAQ6TL7w5wfMNNg' \
+-H 'x-api-key: ??' \
 --data-binary '{"query":"query {\n beer(id: 4934) {\n id\n name\n }\n}","variables":"{}","operationName":null}'
 */
