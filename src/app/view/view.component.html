@@ -1,15 +1,22 @@
+<div class='row'>
+    <div class='col-md-3'>
+        <div *ngIf='beers' class='container'>
+            <ul class='list-group'>
+                <li *ngFor='let beer of beers.data.topBeers.items' 
+                class="list-group-item "
+                [class.active]="beer === selectedBeer" 
+                (click)="onSelect(beer)">{{beer.name}}
+                </li>
+            </ul>
+        </div>  
+    </div>
+    <div class='col-md-9'>
+        <app-beer-detail [beer]="selectedBeer"></app-beer-detail>    
+    </div>
+</div>
 
-<div *ngIf='beers' class='container'>
-    <ul class='list-group'>
-        <li *ngFor='let beer of beers.data.topBeers.items' 
-            class="list-group-item "
-            [class.active]="beer === selectedBeer" 
-            (click)="onSelect(beer)">{{beer.name}}
-        </li>
-    </ul>
-</div> 
 
-<app-beer-detail [beer]="selectedBeer"></app-beer-detail>
+
  
 
   
