@@ -8,10 +8,10 @@
                 <p>{{beer.description}}</p>
                 <p>{{beer.style.description}}</p>
             </div>
-            <div class='col-lg-4'>
+            <div class='col-lg-6'>
                 <h3>{{beer.brewer.name}}</h3>
                 <div *ngIf='beer.brewer.facebook'>
-                <a href={{beer.brewer.facebook}}><i class="fa fa-facebook-official fa-4x text-info"></i></a>
+                    <a href={{beer.brewer.facebook}}><i class="fa fa-facebook-official fa-4x text-info"></i></a>
                 </div>
                 <div *ngIf='beer.brewer.web'>
                     <a href={{beer.brewer.web}}><i class="fa fa-internet-explorer fa-4x text-info"></i></a>
