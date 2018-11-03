@@ -1,22 +1,24 @@
-
-    <div *ngIf='beer'  class='container'>
-        <div class='row'>
-            <div class='col-lg-2'>
+<div *ngIf='beer'  class='container'>
+    <div class='row'>
+        <div class='col-lg-2'>
             <img src={{beer.imageUrl}}>
+        </div>
+        <div class='col-lg-5 border border-rounded'>
+            <h2 class='font-weight-bold'>Beer Description</h2>
+            <p>{{beer.description}}</p>
+            <h2 class='font-weight-bold'>Beer Style</h2>
+            <p>{{beer.style.description}}</p>
+        </div>
+        <div class='col-lg-5 border border-rounded'>
+            <h2 class='font-weight-bold'>Brewery</h2>
+            <h3 class="font-italic">{{beer.brewer.name}}</h3>
+            <div *ngIf='beer.brewer.facebook'>
+                <a href={{beer.brewer.facebook}}><i class="fa fa-facebook-official fa-4x text-info"></i></a>
             </div>
-            <div class='col-lg-4'>
-                <p>{{beer.description}}</p>
-                <p>{{beer.style.description}}</p>
+            <div *ngIf='beer.brewer.web'>
+                <a href={{beer.brewer.web}}><i class="fa fa-internet-explorer fa-4x text-info"></i></a>
             </div>
-            <div class='col-lg-6'>
-                <h3>{{beer.brewer.name}}</h3>
-                <div *ngIf='beer.brewer.facebook'>
-                    <a href={{beer.brewer.facebook}}><i class="fa fa-facebook-official fa-4x text-info"></i></a>
-                </div>
-                <div *ngIf='beer.brewer.web'>
-                    <a href={{beer.brewer.web}}><i class="fa fa-internet-explorer fa-4x text-info"></i></a>
-                </div>
-            </div>
-        </div>        
-    </div>
+        </div>
+    </div>       
+</div>
  
