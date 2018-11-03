@@ -7,12 +7,14 @@ import {AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 import { ViewComponent } from './view/view.component';
 import { BeerDetailComponent } from './beer-detail/beer-detail.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewComponent,
-    BeerDetailComponent
+    BeerDetailComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
