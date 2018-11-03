@@ -7,9 +7,24 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BeerDetailComponent implements OnInit {
   @Input() beer: {};
+
+  isLess=true;
+  moreLessBtn='more';
+
+  moreToggle(): void{
+   if (this.isLess==true){
+     this.isLess=false;
+     this.moreLessBtn='less';
+   }
+   else {
+     this.isLess=true;
+     this.moreLessBtn='more';
+   }
+  }
   constructor() { }
 
   ngOnInit() {
+   
   }
 
 }

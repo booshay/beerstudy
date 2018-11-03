@@ -5,7 +5,9 @@
         </div>
         <div class='col-lg-5 border border-rounded'>
             <h2 class='font-weight-bold'>Beer Description</h2>
-            <p>{{beer.description}}</p>
+            <p *ngIf='isLess===false'>{{beer.description}}</p>
+            <p *ngIf='isLess===true'>{{ (beer.description.length>200)? (beer.description | slice:0:200)+'...':(beer.description)}}</p>
+            <span *ngIf='beer.description.length>200' (click)='moreToggle()' class='font-italic text-primary' >{{moreLessBtn}}</span>
             <h2 class='font-weight-bold'>Beer Style</h2>
             <p>{{beer.style.description}}</p>
         </div>
