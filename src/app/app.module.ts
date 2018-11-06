@@ -8,18 +8,22 @@ import { AppComponent } from './app.component';
 import { ViewComponent } from './view/view.component';
 import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewComponent,
     BeerDetailComponent,
-    NavbarComponent
+    NavbarComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
