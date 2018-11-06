@@ -11,7 +11,9 @@ export class ReviewsService {
  getReviews(beerId){
     
       let data = {
-      query:" {beerReviews(beerId:"+beerId+"){items{comment, score, scores{appearance, aroma, flavor, mouthfeel, overall},author{username, city, state{name,code, country{name}}}}}}",
+      query:` {beerReviews(beerId:`+beerId+`)
+              {items{comment, score, scores{appearance, aroma, flavor, mouthfeel, overall},
+              author{username, city, state{name, country{name}}}}}}`,
       variables:"{}",
       operationName:null
   };
