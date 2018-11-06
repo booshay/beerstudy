@@ -16,7 +16,7 @@ export class ReviewsComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => this.beerId=params['id']);
-    this.reviewService.getReviews()
+    this.reviewService.getReviews(this.beerId)
      .subscribe(data => this.reviews = data);
     
   }

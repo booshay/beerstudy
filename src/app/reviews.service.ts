@@ -8,10 +8,10 @@ export class ReviewsService {
  
   constructor(private http: HttpClient) { }
   
- getReviews(){
+ getReviews(beerId){
     
       let data = {
-      query:"  {topBeers{items{id, name, style {description}, description, overallScore, imageUrl, abv, brewer {name, facebook, web}}}}",
+      query:" {beerReviews(beerId:"+beerId+"){items{comment, score, scores{appearance, aroma, flavor, mouthfeel, overall},author{username, city, state{name,code, country{name}}}}}}",
       variables:"{}",
       operationName:null
   };
@@ -24,3 +24,5 @@ export class ReviewsService {
  }
   
 }
+
+//items{comment, score, scores{appearance, aroma, flavor, mouthfeel, overall},author{username, city, state{name,code, country{name}}}}
