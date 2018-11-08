@@ -1,5 +1,8 @@
  body {
   padding-top: 70px;
+	background-color: #CFD8DC !important;
+	color: white;
+
 }
 .btn-grey{
     background-color:#D8D8D8;
