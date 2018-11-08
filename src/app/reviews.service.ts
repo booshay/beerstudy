@@ -12,7 +12,7 @@ export class ReviewsService {
     
       let data = {
       query:` {beerReviews(beerId:`+beerId+`)
-              {items{comment, score, scores{appearance, aroma, flavor, mouthfeel, overall},
+              {items{comment, createdAt, score, scores{appearance, aroma, flavor, mouthfeel, overall},
               author{username, imageUrl, city, state{name, country{name}}}}}
               beer(id:`+beerId+`){
                 name, imageUrl, averageRating
