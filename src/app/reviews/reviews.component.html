@@ -1,5 +1,5 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+{{today|date}}
 <div *ngIf='reviews' class='container'>
 	<div class='row'>
 		<div class='col-sm-2'>
@@ -113,7 +113,7 @@
 						<div class="col-sm-3">
 							<img src="{{review.author.imageUrl}}" class="img-rounded">
 							<div class="review-block-name"><a href="#">{{review.author.username}}</a></div>
-							<div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+							<div class="review-block-date">{{review.createdAt|date}}</div>
 						</div>
 						<div class="col-sm-9">
 							<div class="review-block-rate">

@@ -10,7 +10,7 @@ import {ReviewsService} from '../reviews.service';
 export class ReviewsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private reviewService: ReviewsService) { }
-  
+  today: number=Date.now();
   beerId: number;
   reviews: {};
 
