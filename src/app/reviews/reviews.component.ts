@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ReviewsService} from '../reviews.service';
 
+
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
@@ -13,6 +14,11 @@ export class ReviewsComponent implements OnInit {
   today: number=Date.now();
   beerId: number;
   reviews: {};
+  
+  
+  testFunc(number){
+    return Math.round(number);
+  }
 
   ngOnInit() {
     this.route.params.subscribe(params => this.beerId=params['id']);
