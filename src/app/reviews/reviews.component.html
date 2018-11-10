@@ -1,5 +1,4 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-{{today|date}}
 <div *ngIf='reviews' class='container'>
 	<div class='row'>
 		<div class='col-sm-2'>
@@ -11,7 +10,7 @@
 			 		<div class="col-sm-3">
 				 		<div class="rating-block">
 					 		<h4>Average user rating</h4>
-					 		<h2 class="bold padding-bottom-7">{{reviews.data.beer.averageRating | number : '1.2-2'}} <small>/ 5</small></h2>
+					 		<h2 class="bold padding-bottom-7">{{reviews.data.beer.averageRating | number : '1.0-1'}} <small>/ 5</small></h2>
 					 		<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
 						 	<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 					 		</button>
@@ -112,7 +111,7 @@
 					<div  class="row">
 						<div class="col-sm-3">
 							<img src="{{review.author.imageUrl}}" class="img-rounded">
-							<div class="review-block-name"><a href="#">{{review.author.username}}</a></div>
+							<div class="review-block-name">{{review.author.username}}</div>
 							<div class="review-block-date">{{review.createdAt|date}}</div>
 						</div>
 						<div class="col-sm-9">
@@ -140,19 +139,6 @@
 				</div>
 			</div>
 		</div>
-
 </div>		
 	
-		
-    
-
-
-
-
-
-
-<p>
-  reviews works!
-</p>
-{{beerId}}
-{{reviews | json}}
+ 
