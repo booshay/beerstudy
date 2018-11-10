@@ -1,5 +1,5 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<div *ngIf='reviews' class='container'>
+<div *ngIf='reviews' class='container page'>
 	<div class='row'>
 		<div class='col-sm-2'>
 			<img src='{{reviews.data.beer.imageUrl}}'>
@@ -116,19 +116,19 @@
 						</div>
 						<div class="col-sm-9">
 							<div class="review-block-rate">
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+								<button type="button" [className]="testFunc(review.score)>=1 ? 'btn btn-warning btn-xs' : 'btn btn-default btn-grey btn-xs'" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+								<button type="button" [className]="testFunc(review.score)>=2 ? 'btn btn-warning btn-xs' : 'btn btn-default btn-grey btn-xs'" aria-label="Left Align" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+								<button type="button" [className]="testFunc(review.score)>=3 ? 'btn btn-warning btn-xs' : 'btn btn-default btn-grey btn-xs'" aria-label="Left Align" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+								<button type="button" [className]="testFunc(review.score)>=4 ? 'btn btn-warning btn-xs' : 'btn btn-default btn-grey btn-xs'" aria-label="Left Align" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
-								<button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+								<button type="button" [className]="testFunc(review.score)>=5 ? 'btn btn-warning btn-xs' : 'btn btn-default btn-grey btn-xs'" aria-label="Left Align" aria-label="Left Align">
 								  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 								</button>
 							</div>
@@ -142,4 +142,3 @@
 </div>		
 	
  
-{{reviews|json}}
