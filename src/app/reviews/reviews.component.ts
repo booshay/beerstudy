@@ -17,10 +17,9 @@ export class ReviewsComponent implements OnInit {
   reviewScore={
     0:0, 1:0, 2:0, 3:0, 4:0, 5:0
   };
-  testno=2;
+ percentage:number;
   
-  
-  
+
   testFunc(number){
     return Math.round(number);
   }
@@ -38,6 +37,8 @@ export class ReviewsComponent implements OnInit {
     this.route.params.subscribe(params => this.beerId=params['id']);
     this.reviewService.getReviews(this.beerId)
      .subscribe(data => this.reviews = data);
+  
+     
     
   }
 
@@ -45,12 +46,15 @@ export class ReviewsComponent implements OnInit {
     if(document.getElementById("5star")){
       document.getElementById("5star").innerText= String(this.reviewScore[5]);
       document.getElementById("4star").innerText= String(this.reviewScore[4]);
-      document.getElementById("3star").innerText= String(this.reviewScore[3])
-      document.getElementById("2star").innerText= String(this.reviewScore[2])
-      document.getElementById("1star").innerText= String(this.reviewScore[1])
-    }
-   
-     console.log(this.reviewScore)
+      document.getElementById("3star").innerText= String(this.reviewScore[3]);
+      document.getElementById("2star").innerText= String(this.reviewScore[2]);
+      document.getElementById("1star").innerText= String(this.reviewScore[1]);
+      }
   }
+  
+  
+ 
+  
+  
 
 }
