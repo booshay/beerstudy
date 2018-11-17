@@ -12,7 +12,8 @@ getBeer(){
 
   let data = {
      // query:"{beer(id: "+idNum+") {name,abv,description,imageUrl}}",
-      query:"  {topBeers{items{id, name, style {description}, description, overallScore, imageUrl, abv, brewer {name, facebook, web}}}}",
+      query: `  {topBeers{items{id, name, style {description}, description, 
+      overallScore, imageUrl, abv, brewer {name, facebook, web}}}}`,
       variables:"{}",
       operationName:null
   };

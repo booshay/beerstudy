@@ -1,12 +1,14 @@
 import { Component, OnInit} from '@angular/core';
 import {DataService} from '../data.service';
+import { map } from 'rxjs/operators';
+
 
 @Component({
-  selector: 'app-view',
-  templateUrl: './view.component.html',
-  styleUrls: ['./view.component.css']
+  selector: 'app-top-ten',
+  templateUrl: './top-ten.component.html',
+  styleUrls: ['./top-ten.component.css']
 })
-export class ViewComponent implements OnInit {
+export class TopTenComponent implements OnInit {
   beers: {};
   selectedBeer: {};
   isLess=false;
@@ -20,6 +22,7 @@ export class ViewComponent implements OnInit {
 
   ngOnInit() {
   this.dataService.getBeer()
+   
    .subscribe(data=>console.log(this.beers = data));
   }
 

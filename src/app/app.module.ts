@@ -5,7 +5,7 @@ import {AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 import { AppComponent } from './app.component';
-import { ViewComponent } from './view/view.component';
+import { TopTenComponent } from './top-ten/top-ten.component';
 import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReviewsComponent } from './reviews/reviews.component';
@@ -15,7 +15,7 @@ import { StarsComponent } from './stars/stars.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ViewComponent,
+    TopTenComponent,
     BeerDetailComponent,
     NavbarComponent,
     ReviewsComponent,
