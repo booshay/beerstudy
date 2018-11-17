@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<div class="container">
+  <br/>
+	<div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form #searchForm="ngForm" class="card card-sm">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
+                    </div>
+                    <div class="col">
+                        <input name='input' [(ngModel)]="beerName" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for beer here">
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-lg btn-success" type="submit" (click)="searchBeer(beerName)">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ <br/>
+<div class='row'>
+    <div class='col-md-3'>
+        <div *ngIf='beers' class='container'>
+            <ul class='list-group'>
+                <li *ngFor='let beer of beers.data.beerSearch.items' 
+                class="list-group-item "
+                [class.active]="beer === selectedBeer" 
+                (click)="onSelect(beer)">{{beer.name}}
+                </li>
+            </ul>
+        </div>  
+    </div>
+    <div class='col-md-9'>
+        <app-beer-detail [beer]="selectedBeer"></app-beer-detail>    
+    </div>
+</div>
+ 

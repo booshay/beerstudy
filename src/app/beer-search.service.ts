@@ -8,10 +8,10 @@ export class BeerSearchService {
 
   constructor(private http: HttpClient) { }
 
-  searchBeer(){
+  searchBeer(name){
    
     let data= {
-      query: `{beerSearch(query:"coors"){items{id, name, style {description}, description, overallScore,
+      query: `{beerSearch(query:"`+name+`"){items{id, name, style {description}, description, overallScore,
        imageUrl, abv, brewer {name, facebook, web}}}}`,
       variables:"{}",
       operationName:null

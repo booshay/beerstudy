@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {TopTenComponent} from './top-ten/top-ten.component';
 import {ReviewsComponent} from './reviews/reviews.component';
-
+import {HomeComponent} from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/top-ten', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent  },
   { path: 'top-ten', component: TopTenComponent  },
   { path : 'reviews/:id', component: ReviewsComponent}
 ];
