@@ -1,0 +1,15 @@
+ 
+.gray-btn{
+    background-color: rgb(181, 184, 181);
+}
+
+.rating-block{
+	background-color:#FAFAFA;
+	border:1px solid #EFEFEF;
+	padding:5px;
+	border-radius:3px;
+}
+.count{
+    position: relative;
+    left: -40px;
+}

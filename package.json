@@ -15,7 +15,6 @@
     "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
-    "@angular/cli": "^7.0.4",
     "@angular/compiler-cli": "^7.0.3",
     "@angular/core": "~7.0.0",
     "@angular/forms": "~7.0.0",
@@ -30,15 +29,16 @@
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "latest": "^0.2.0",
     "path": "^0.12.7",
     "popper.js": "^1.12.9",
     "rxjs": "^6.3.3",
-    "zone.js": "~0.8.26",
-    "typescript": "~3.1.1"
+    "typescript": "~3.1.1",
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
-    "@angular/cli": "^7.0.4",
+    "@angular/cli": "^7.0.5",
     "@angular/compiler-cli": "^7.0.3",
     "@angular/language-service": "~7.0.0",
     "@types/jasmine": "~2.8.8",

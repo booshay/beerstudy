@@ -10,6 +10,7 @@ import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StarsComponent } from './stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     ViewComponent,
     BeerDetailComponent,
     NavbarComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,
