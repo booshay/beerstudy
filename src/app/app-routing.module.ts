@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {ViewComponent} from './view/view.component';
+import {TopTenComponent} from './top-ten/top-ten.component';
 import {ReviewsComponent} from './reviews/reviews.component';
-
+import {HomeComponent} from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/view', pathMatch: 'full' },
-  { path: 'view', component: ViewComponent  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent  },
+  { path: 'top-ten', component: TopTenComponent  },
   { path : 'reviews/:id', component: ReviewsComponent}
 ];
 
