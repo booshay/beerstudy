@@ -24,7 +24,6 @@ export class BeerDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-   
   }
 
 }

@@ -1,8 +1,9 @@
 
 <div *ngIf='beer'  class='container'>
-    <div class='row'>
-        <div class='col-lg-2'>
+    <div class='row text-white'>
+        <div class='col-xs-2 col-md-6 col-lg-2'>
             <img src={{beer.imageUrl}}>
+            <a [routerLink]="['/reviews', beer.id]"><button class='btn btn-primary'>Reviews</button></a>
         </div>
         <div class='col-lg-5 border border-rounded'>
             <h2 class='font-weight-bold'>Beer Description</h2>
@@ -23,6 +24,5 @@
             </div>
         </div>
     </div>   
-    <a [routerLink]="['/reviews', beer.id]"><button class='btn btn-primary'>Reviews</button></a>
 </div>
  
