@@ -14,9 +14,9 @@ export class HomeComponent implements OnInit {
   selectedBeer: {};
 
 
-  searchBeer(beer){
+  searchBeer(beerName){
     this.beers=null;
-   this.beerSearchService.searchBeer(this.beerName)
+   this.beerSearchService.searchBeer(beerName)
     .subscribe(data => console.log(this.beers=data));
     this.selectedBeer=null;
   }
