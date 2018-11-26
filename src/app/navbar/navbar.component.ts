@@ -10,6 +10,7 @@ import {BeerSearchService} from '../beer-search.service';
 export class NavbarComponent implements OnInit {
 
   constructor(private beerSearchService:BeerSearchService) { }
+  beerName:string;
   
   searchBeer(beerName) {
     this.beerSearchService.searchBeer(beerName);

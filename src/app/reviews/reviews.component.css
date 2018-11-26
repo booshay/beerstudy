@@ -2,11 +2,6 @@ body {
   padding-top: 70px;  
 }
 
-.page{
-	margin-top: 80px;
-}
-
-
 .btn-grey{
     background-color:#D8D8D8;
 	color:#FFF;
@@ -50,5 +45,16 @@ body {
 .review-block-description{
 	font-size:13px;
 }
-
+a{
+	float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+	text-decoration: none;
+	position: fixed;
+	border:solid white 2px;
+	border-radius: 15px;
+	background-color: rgb(78, 94, 114)
+}
  
