@@ -1,34 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {BeerSearchService} from '../beer-search.service'
+import * as Rx from "rxjs";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
 
-  constructor(private beerSearchService:BeerSearchService) { }
+export class HomeComponent implements OnDestroy {
   beerName:string;
   beers:{};
   selectedBeer: {};
+  sub: Rx.Subscription;
 
-
-  searchBeer(beerName){
-    this.beers=null;
-   this.beerSearchService.searchBeer(beerName)
-    .subscribe(data => console.log(this.beers=data));
-    this.selectedBeer=null;
+  constructor(private beerSearchService: BeerSearchService) {
+    this.sub = this.beerSearchService.beers$.subscribe(beers => {
+     this.beers = beers;
+    });
   }
 
   onSelect(beer): void {
     this.selectedBeer = beer;
     console.log(beer);
-
   }
 
-  ngOnInit() {
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
-
 }
-
