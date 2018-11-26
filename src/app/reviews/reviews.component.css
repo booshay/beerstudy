@@ -46,7 +46,7 @@ body {
 	font-size:13px;
 }
 a{
-	float: left;
+	 
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -55,6 +55,16 @@ a{
 	position: fixed;
 	border:solid white 2px;
 	border-radius: 15px;
-	background-color: rgb(78, 94, 114)
+	background-color: rgb(78, 94, 114);
+	z-index: 1;
+}
+ 
+img{
+	padding-top: 60px;
+	z-index: 1;
+}
+
+.row{
+	padding-top:2px;
 }
  
