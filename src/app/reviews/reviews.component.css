@@ -59,12 +59,44 @@ a{
 	z-index: 1;
 }
  
-img{
-	padding-top: 60px;
-	z-index: 1;
+ 
+ 
+.flex-container {
+	display: flex;
+	justify-content: flex-start;
+	height:260px;
+	 
+  }
+
+.flex-container >img{
+	flex-basis: 100px;
+	 
+	margin: 10px;
 }
 
-.row{
-	padding-top:2px;
+.flex-container > div{
+	flex-basis: 400px;
+	 
+	margin: 10px;
+	text-align: left;
+	font-size: 12px; 
 }
- 
+
+.gray-btn{
+    background-color: rgb(181, 184, 181);
+}
+
+.rating-breakdown-block{
+	background-color:#FAFAFA;
+	border:1px solid #EFEFEF;
+	padding:5px;
+	border-radius:3px;
+}
+.count{
+    position: relative;
+    left: -140px;
+}
+
+.margintop{
+  margin-top:250px;
+}
