@@ -1,54 +1,107 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<div *ngIf='reviews' class='container-fluid'>
- 
- <div class="row"><!--home button only-->
-  <div class="col-xs-1 col-sm-2 col-md-2 col-lg-1">
-	 <a  class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
-	</div> 
- </div>
-	<div class="row">
-	 <div class="col-xs-3 ">
-	 	<img src='{{reviews.data.beer.imageUrl}}'>
-	 </div>
-	</div>
-
  
 
- 
- <div class="row"><!--avg user rating-->
 
-	<div class="col-xs-12 col-sm-7 col-md-5 col-lg-4 col-xl-3">
-			<div class="rating-block">
-					<h4>Average user rating</h4>
-					<h2 class="bold padding-bottom-7">{{reviews.data.beer.averageRating | number : '1.0-0'}} <small>/ 5</small></h2>
-					<button type="button" [className]="testFunc(reviews.data.beer.averageRating)>=1 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
-					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" [className]="testFunc(reviews.data.beer.averageRating)>=2 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
-					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" [className]="testFunc(reviews.data.beer.averageRating)>=3 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
-					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" [className]="testFunc(reviews.data.beer.averageRating)>=4 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
-					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
-					<button type="button" [className]="testFunc(reviews.data.beer.averageRating)==5 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
-					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-					</button>
+ <app-navbar></app-navbar>
+	<div  *ngIf='reviews' class='margin-top flex-container'>
+		<img src='{{reviews.data.beer.imageUrl}}'>
+		<div class="rating-block"><!--Avg user rating-->
+			<h4>Average user rating</h4>
+			<h2 class="bold padding-bottom-7">{{reviews.data.beer.averageRating | number : '1.0-0'}} <small>/ 5</small></h2>
+			<button type="button" [className]="testFunc(reviews.data.beer.averageRating)>=1 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+			</button>
+			<button type="button" [className]="testFunc(reviews.data.beer.averageRating)>=2 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+			</button>
+			<button type="button" [className]="testFunc(reviews.data.beer.averageRating)>=3 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+			</button>
+			<button type="button" [className]="testFunc(reviews.data.beer.averageRating)>=4 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+			</button>
+			<button type="button" [className]="testFunc(reviews.data.beer.averageRating)==5 ? 'btn btn-warning btn-sm' : 'btn btn-default btn-grey btn-sm'" aria-label="Left Align">
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+			</button>
+		</div>
+		<div class="review-block-rate rating-breakdown-block"><!--rating breakdown-->
+				<h4>Rating breakdown</h4>
+			 <div class='row'>
+			   <div class='col-sm-7'>
+				  <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>  
+				  <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+				  <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+				  <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+				  <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>    
+			   </div>
+			   <div class='col-sm-2'>
+				  <div id="5star" class="pull-right"></div>
+			   </div>
+			 </div>
+			
+			  <br>
+			  <div class='row'>
+				  <div class='col-sm-7'>
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>  
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>    
+				  </div>
+				  <div class='col-sm-2'>
+					 <div id="4star" class="pull-right"></div>
+				  </div>
 				</div>
-		 
- </div>
-	</div>
+			
+			  <br>
+			  <div class='row'>
+				  <div class='col-sm-7'>
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>  
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>    
+				  </div>
+				  <div class='col-sm-2'>
+					 <div id="3star" class="pull-right"></div>
+				  </div>
+				</div>
+			
+			  <br>
+			  <div class='row'>
+				  <div class='col-sm-7'>
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>  
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>    
+				  </div>
+				  <div class='col-sm-2'>
+					 <div id="2star" class="pull-right"></div>
+				  </div>
+				</div>
+			  <br>
+			  <div class='row'>
+				  <div class='col-sm-7'>
+					 <button type="button" class='btn btn-warning btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>  
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>
+					 <button type="button" class='btn gray-btn btn-xs'  aria-label="Left Align"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button>    
+				  </div>
+				  <div class='col-sm-2'>
+					 <div id="1star" class="pull-right"></div>
+				  </div>
+				</div>
+			</div>
+	</div>	
  
-	<div class="row"><!--rating breakdown-->
-		<div class="col-xs-12 col-sm-7 col-md-5 col-lg-4 col-xl-3">
-				<app-stars></app-stars><!--rating breakdown page-->
-		</div>
-		</div>
 
-		<div *ngIf="reviews" class="container">
-				<div class="row">
+	
+	
+
+		<div *ngIf="reviews" class="">
+				<div class="row reviews">
 						<div class="col-sm-7">
 							<hr/>
 							<div *ngFor="let review of reviews.data.beerReviews.items"  class="review-block">
@@ -86,7 +139,7 @@
 					</div>
 			</div>	
  		
-</div>		
+ 		
 
 		
 	

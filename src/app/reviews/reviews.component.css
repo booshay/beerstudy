@@ -59,12 +59,52 @@ a{
 	z-index: 1;
 }
  
-img{
-	padding-top: 60px;
-	z-index: 1;
+ 
+ 
+
+
+.gray-btn{
+    background-color: rgb(181, 184, 181);
 }
 
-.row{
-	padding-top:2px;
+.rating-breakdown-block{
+	background-color:#FAFAFA;
+	border:1px solid #EFEFEF;
+	padding:5px;
+	border-radius:3px;
 }
  
+
+.margin-top{
+  margin-top:90px;
+}
+
+@media screen and (min-width: 1050px){
+	.flex-container {
+		display: flex;
+		justify-content: center;
+		height:300px;
+		 
+	  }
+	
+	.flex-container >img{
+		flex-basis: 100px;
+		margin: 10px;
+	}
+	
+	.flex-container > div{
+		flex-basis: 400px;
+		margin: 10px;
+		text-align: left;
+		font-size: 12px; 
+	}
+}
+
+.reviews{
+	display: flex;
+	justify-content: center;
+}
+.reviews >div{
+  flex-basis:2400px;
+  margin: 10px;
+}

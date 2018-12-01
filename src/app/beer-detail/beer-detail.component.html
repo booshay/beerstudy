@@ -1,19 +1,21 @@
 
 <div *ngIf='beer'  class='container'>
     <div class='row text-white'>
-        <div class='col-xs-2 col-md-6 col-lg-2'>
+        <div class='col-xs-2 col-md-6 col-lg-2'><!--holds review button link and image-->
             <a [routerLink]="['/reviews', beer.id]"><button class='btn btn-primary'>Reviews</button></a>
             <img src={{beer.imageUrl}}>
         </div>
-        <div class='col-lg-5 border border-rounded'>
+        <div class='col-lg-6 border border-rounded'><!--holds description of beer and beer style-->
             <h2 class='font-weight-bold'>Beer Description</h2>
             <p *ngIf='isLess===false'>{{beer.description}}</p>
             <p *ngIf='isLess===true'>{{ (beer.description.length>200)? (beer.description | slice:0:200)+'...':(beer.description)}}</p>
             <span *ngIf='beer.description.length>200' (click)='moreToggle()' class='font-italic text-primary' >{{moreLessBtn}}</span>
             <h2 class='font-weight-bold'>Beer Style</h2>
             <p innerHTML="{{beer.style.description}}"></p>
+
+
         </div>
-        <div class='col-lg-5 border border-rounded'>
+        <div class='col-lg-4 border border-rounded'><!--holds brewery information-->
             <h2 class='font-weight-bold'>Brewery</h2>
             <h3 class="font-italic">{{beer.brewer.name}}</h3>
             <div *ngIf='beer.brewer.facebook'>
