@@ -73,34 +73,38 @@ a{
 	padding:5px;
 	border-radius:3px;
 }
-.count{
-    position: relative;
-    left: -140px;
-}
+ 
 
-.margintop{
-  margin-top:250px;
+.margin-top{
+  margin-top:90px;
 }
 
 @media screen and (min-width: 1050px){
 	.flex-container {
 		display: flex;
-		justify-content: flex-start;
-		height:260px;
+		justify-content: center;
+		height:300px;
 		 
 	  }
 	
 	.flex-container >img{
 		flex-basis: 100px;
-		 
 		margin: 10px;
 	}
 	
 	.flex-container > div{
 		flex-basis: 400px;
-		 
 		margin: 10px;
 		text-align: left;
 		font-size: 12px; 
 	}
+}
+
+.reviews{
+	display: flex;
+	justify-content: center;
+}
+.reviews >div{
+  flex-basis:2400px;
+  margin: 10px;
 }
