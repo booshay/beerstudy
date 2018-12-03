@@ -11,7 +11,6 @@ import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AppRoutingModule } from './app-routing.module';
-import { StarsComponent } from './stars/stars.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { HomeComponent } from './home/home.component';
     BeerDetailComponent,
     NavbarComponent,
     ReviewsComponent,
-    StarsComponent,
     HomeComponent
   ],
   imports: [
