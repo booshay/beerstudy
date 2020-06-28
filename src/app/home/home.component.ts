@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {BeerSearchService} from '../beer-search.service'
-import * as Rx from "rxjs";
+import {BeerSearchService} from '../beer-search.service';
+import * as Rx from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +9,8 @@ import * as Rx from "rxjs";
 })
 
 export class HomeComponent implements OnDestroy {
-  beerName:string;
-  beers:{};
+  beerName: string;
+  beers: {};
   selectedBeer: {};
   sub: Rx.Subscription;
 

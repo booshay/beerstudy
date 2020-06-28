@@ -11,15 +11,14 @@ import {Router} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public router: Router, private beerSearchService:BeerSearchService) { }
-  beerName:string;
-   
+  constructor(public router: Router, private beerSearchService: BeerSearchService) { }
+  beerName: string;
 
   searchBeer(beerName) {
     this.beerSearchService.searchBeer(beerName);
-    this.router.navigateByUrl('/home')
+    this.router.navigateByUrl('/home');
   }
-  
+
   ngOnInit() {
   }
 

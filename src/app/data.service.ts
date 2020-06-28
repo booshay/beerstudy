@@ -7,19 +7,19 @@ import {HttpClient} from '@angular/common/http';
 export class DataService {
 
   constructor(private http: HttpClient) { }
- 
-getBeer(){
 
-  let data = {
+getBeer() {
+
+  const data = {
      // query:"{beer(id: "+idNum+") {name,abv,description,imageUrl}}",
-      query: `  {topBeers{items{id, name, style {description}, description, 
+      query: `  {topBeers{items{id, name, style {description}, description,
       overallScore, imageUrl, abv, brewer {name, facebook, web}}}}`,
-      variables:"{}",
-      operationName:null
+      variables: '{}',
+      operationName: null
   };
 
   return this.http.post('https://api.r8.beer/v1/api/graphql/', data, {
-  headers:{
+  headers: {
      'x-api-key': 'yo5e6HwJhh4xzYm1uTUO9mdHTmAQ6TL7w5wfMNNg'}
     });
 }

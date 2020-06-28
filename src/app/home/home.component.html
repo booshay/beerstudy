@@ -3,16 +3,15 @@
     <div class='col-md-3'>
         <div *ngIf='beers' class='container'>
             <ul class='list-group'>
-                <li *ngFor='let beer of beers.data.beerSearch.items' 
+                <li *ngFor='let beer of beers.data.beerSearch.items'
                 class="list-group-item "
-                [class.active]="beer === selectedBeer" 
+                [class.active]="beer === selectedBeer"
                 (click)="onSelect(beer)">{{beer.name}}
                 </li>
             </ul>
-        </div>  
+        </div>
     </div>
     <div class='col-md-9'>
-        <app-beer-detail [beer]="selectedBeer"></app-beer-detail>    
+        <app-beer-detail [beer]="selectedBeer"></app-beer-detail>
     </div>
 </div>
- 
